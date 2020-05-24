@@ -6,6 +6,9 @@ body{
     background-color:black;
     border-radius: 8px;
 }
+.bg-dark1{
+    background-color: rgb(45,45,45) !important;
+}
 .n1
 {
     background-color:black;

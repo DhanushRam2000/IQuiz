@@ -8,8 +8,12 @@ body{
 }
 .n1
 {
-    background-color:rgb(200,200,200);
+    background-color:black;
     height: 100%;
+}
+
+.bg-dark1{
+    background-color: rgb(45,45,45) !important;
 }
 
 .no{
