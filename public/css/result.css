@@ -147,6 +147,17 @@
     height:170px;
     margin-top:25px;
 }
+.sp20{
+    min-height:170px;
+    margin-top:25px;
+}
+.sp21{
+    max-height:90px;
+}
+.sp22{
+    width: 600px;
+    background-color: #E9ECEF;
+}
 .sp7{
     font-size:20px;
 }
@@ -201,6 +212,10 @@
      .question_size{
         font-size: 6vw;
     }
+    .sp22{
+        width: 140px;
+        background-color: #E9ECEF;
+    }
      .score
     {
         height: 200px;
@@ -210,6 +225,14 @@
         margin-top:20px ;
         text-align: center;
         font-size: 30px;
+    }
+    .sp17{
+        height:170px;
+        margin-top:18px;
+    }
+    .sp14{
+        height:200px;
+        margin-top:18px ;
     }
 }
 

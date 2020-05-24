@@ -28,8 +28,7 @@ qz = (req,res,next) => {
                     return true
                 }))
                 {
-                    res.redirect("/dashboard");
-                    // res.render("attended",{result:"Already attended"});
+                    return res.render("attended",{result:"Already attended"});
                 }
                 else{
                     if(user.attended_quiz && user.attended_quiz.find((q)=>{
@@ -37,7 +36,7 @@ qz = (req,res,next) => {
                          return true
                      }))
                     {
-                        res.render("attended",{result:"sorry forbidden"});
+                        return res.render("attended",{result:"sorry forbidden"});
                     }
                     else{
                         const date = Date.now();

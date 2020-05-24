@@ -12,6 +12,7 @@ const Routes = require("./routes/route");
 const user = require("./models/user");
 
 // const uri = "mongodb://localhost:27017/IQUIZA2"; 
+// console.log(process.env.PORT);
 
 //online cluster
 const uri = `mongodb+srv://ramapp:${process.env.MONGO_PASSWORD}@cluster0-yce8w.mongodb.net/IQUIZA2?retryWrites=true&w=majority`; //?retryWrites=true&w=majority

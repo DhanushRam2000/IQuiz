@@ -95,7 +95,8 @@ rescal = (req,res,next) => {
                                             result:result,
                                             total:total,
                                             totalpos:totalpos,
-                                            newsetter:setter
+                                            newsetter:setter,
+                                            qid:req.body.quizid
                                             });
                                     });
                                 

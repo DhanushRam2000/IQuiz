@@ -8,6 +8,7 @@ const categorySchema = new Schema({
       name: {type:String , required:true},
       user: {userid:{type:Schema.Types.ObjectId,ref:'user'},name:{type:String}},
       imgurl: {type:String},
+      star:{type:Number},
       noa:{type:Number},
       quizid:[{type:Schema.Types.ObjectId,ref:'quiz'}]
   }]

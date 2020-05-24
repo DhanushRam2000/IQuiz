@@ -95,7 +95,7 @@ font-size: 20px;
 margin: 20px auto 0 auto;
 width: 130px;
 border: 1px solid #3071A9 ;
-background-color: #3071A9;
+background-color: rgb(15, 80, 136);
 color: white;
 border-radius: 5px;
 text-align: center;
@@ -137,6 +137,11 @@ font-size: 20px;
     background-color:#ffffff;
     border-radius: 10px;
 }
+
+.domain{
+    margin-bottom: 10px;
+}
+  
   
 .quiz-card {
     width: 120px;
@@ -145,7 +150,7 @@ font-size: 20px;
     max-width: 95%;
     margin:5px auto;
     border: 1px solid white;
-    background-color:#3071A9;
+    background-color:rgb(15, 80, 136);
     border-radius: 25px;
 }
 
@@ -167,7 +172,7 @@ font-size: 20px;
         max-width: 95%;
         margin:5px auto;
         border: 1px solid white;
-        background-color:#3071A9;
+        background-color:rgb(15, 80, 136);
         border-radius: 25px;
     }
    
@@ -189,7 +194,7 @@ font-size: 20px;
         max-width: 95%;
         margin:5px auto;
         border: 1px solid white;
-        background-color:#3071A9;
+        background-color:rgb(15, 80, 136);
         border-radius: 25px;
     }
 }
@@ -209,7 +214,7 @@ font-size: 20px;
         max-width: 95%;
         margin:5px auto;
         border: 1px solid white;
-        background-color:#3071A9;
+        background-color:rgb(15, 80, 136);
         border-radius: 25px;
     }
 }

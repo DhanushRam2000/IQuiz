@@ -1,4 +1,7 @@
-        
+html{
+  overflow:hidden
+}      
+
 body {
     background:#000000;
     color: #333;
@@ -467,12 +470,28 @@ img {
   .starwars-demo {
     font-size: 10px;
   }
+  #background-wrap {
+    overflow:hidden;
+  }
+  html{
+    overflow:hidden
+  }    
 }
 
 @media only screen and (max-width: 480px) {
   .starwars-demo {
     font-size: 7px;
   }
+  html{
+    overflow:hidden
+  }    
+  #background-wrap {
+    overflow:hidden;
+  }
+  body{
+    overflow:hidden
+  }   
+  
 }
 
 .mybtn
@@ -491,4 +510,3 @@ img {
   width: 150px;
   margin-right: 10%;
 }
-

@@ -17,6 +17,7 @@ const quiz = require("../controller/quiz");
 const quizset = require("../controller/quizzesset");
 const result = require("../controller/result");
 const answer = require("../controller/answer");
+const comment = require("../controller/comment");
 const isAuth = require('../middleware/is_auth');
 const isSetter = require('../middleware/is_setter');
 const isnotAuth = require('../middleware/is_not_auth');
@@ -80,6 +81,8 @@ private_routes.get("/quiz/:quizid", isAuth ,quiz.qz);
 
 private_routes.get("/answer/:quizid", isAuth ,answer.ans);
 
+private_routes.get("/comment/:quizid", isAuth ,comment.cg);
+
 private_routes.post("/setquiz1", isAuth , isSetter ,set1.sq1p);
 
 private_routes.post("/setquiz2", isAuth , isSetter ,set2.sq2p);
@@ -89,6 +92,8 @@ private_routes.post("/setquiz3", isAuth , isSetter ,set3.sq3p);
 private_routes.post("/setquiz4", isAuth , isSetter, isvalid3 ,set4.sq4p);
 
 private_routes.post("/setquiz5", isAuth , isSetter ,set5.sq5p);
+
+private_routes.post("/comment", isAuth ,comment.cp);
 
 private_routes.post("/result",  isAuth ,result.rescal);
 

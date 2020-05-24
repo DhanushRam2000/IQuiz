@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     
    
  
@@ -98,6 +99,7 @@
       <div class="card__content">
       <p style="text-align:center;margin:3px;">BY : <%= categories[i].quizzes[j].user.name ? categories[i].quizzes[j].user.name : "IQUIZ" %></p>
       <button type="button" class="btn btn-outline-info btn-sm box " id="diff<%= k %>" >Difficulty</button>
+      <div class="rating"><% for(y=0;y<categories[i].quizzes[j].star;y++) { %><span class="fa fa-star " aria-hidden="true"></span><% }; %></div>
       </div>
       </div>
       </article>

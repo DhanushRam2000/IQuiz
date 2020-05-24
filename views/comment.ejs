@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/quiztaker.css">
-    <link rel="stylesheet" href="css/result.css">
-    
-   
- 
+    <link rel="stylesheet" href="/../css/dashboard.css">
+    <link rel="stylesheet" href="/../css/quiztaker.css">
+    <link rel="stylesheet" href="/../css/result.css">
     <title>I-Quiz</title>
     
   </head>
@@ -36,18 +33,18 @@
               <li class="nav-item">
                   <a class="nav-link" href="/attendedquiz" data-toggle="tooltip" data-placement="bottom" title="Attended by you">Attended Quiz</a>
                 </li>
-              <li class="nav-item selected">
-                  <a class="nav-link selected" href="#" data-toggle="tooltip" data-placement="bottom" title="Home page">Result</a>
-                </li>
               <div class="sq">
                 <li class="nav-item">
                   <a class="nav-link <%= setter? '':'disabled' %> " href="/setquiz1" tabindex="-1" aria-disabled="<%= setter.toString() %>"  >Set Quiz</a>
                 </li></div>
-                                  <% if(setter){ %>
+                <% if(setter){ %>
                 <li class="nav-item">
                   <a class="nav-link" href="/quizzesset" data-toggle="tooltip" data-placement="bottom" title="setted by you">Quizzes set</a>
                 </li>
                   <% }; %>
+                <li class="nav-item selected">
+                  <a class="nav-link selected" href="/review" data-toggle="tooltip" data-placement="bottom" title="setted by you">Review</a>
+                </li>
                 <li class="nav-item dropdown sk">
                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Profile
@@ -69,89 +66,27 @@
           </nav>
 
        </div>
-       
-       <div class="flex-container tp1 ">
-        <div class="flex-container" id="scorecard">
-        <div class="score container"><p><br>You scored <span><%= total %> / <%= totalpos %></span></p>
-        <div class="flex-container cus">
-            <button type="button" class="btn btn-outline-success btn-large" id="review">REVIEW</button>
-          </div>
-        </div>
-
-        <% if(newsetter == true) { %>
-        <div class="flex-container tp1 sp19" >
-        <div class="flex-container sp19">
-        <div class="score container sp19">
-        <p class="sp3">SET QUIZ option is now enabled <br>You can set your own quiz</p>
-        </div></div></div>
-        <% }; %>
-            
+       <form action="/comment" method="post" enctype="multipart/form-data" novalidate>
+        <div class="flex-container tp1     sp20 " >
+        <div class="flex-container   sp20 ">
+        <div class="score container   sp20 ">
         
-       </div> 
-        <div style="display: none;" id="answer">
-          <!--
-          <button type="button" class="btn btn-outline-success btn-large whity" onclick="window.location.href='/dashboard'">Back to dashboard</button>
-          <br><br>
-          -->
-          <div class="flex-container cus">
-            <a href="/comment/<%= qid %>" class="btn btn-outline-success btn-large sp22" id="review">COMMENT</a>
-          </div>
-        <% for(i=0 ; i<questions.length ; i++) { %>
-        <div class="jumbotron jumbo_custom"> 
-                
-            <h1 class="display-6 question_size"><%= i+1 %>.<%= questions[i].question %> - <%= questions[i].points %>points</h1>
-            <hr class="my-6">
-            <div class="flex-domains">
+        <p class="sp10">Comment</p>
+        <textarea id="s1" class="form-control sp21" name="comment"></textarea>
+                <button type="submit" class="btn btn-outline-success btn-large" id="review1">Submit</button>
+        </div></div></div>
+        <input type="hidden" name="quizid" value="<%= qid %>">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        
+        </form>
 
-            <% for(j=0 ; j < 4 ; j++) { 
-                if(questions[i].options[j] == result[i].op && questions[i].options[j] != questions[i].options[questions[i].answer-1]){ %>
-                  <div class="wrong"><%= questions[i].options[j] %></div>
-                <% }
-                else if(questions[i].options[j] == questions[i].options[questions[i].answer-1]){ %>
-                  <div class="correct"><%= questions[i].options[j] %></div>
-            <% }else{%>
-            <div class="option"><%= questions[i].options[j] %></div>  
-
-            <% };}; %>  
-
-            </div>
-            <br>
-
-            <div class="flex-domains">
-
-          <%if(!result[i].op){%>
-          <h5 class="cust12" style="color:#b52b2b" >YOU DID NOT ANSWER</h5>
-          <%}else if(result[i].op == questions[i].options[questions[i].answer-1]){%>
-          <h5 class="cust12" style="color:#0f872f" >YOU ANSWERED CORRECT</h5>
-          <%}else{%>
-          <h5 class="cust12" style="color:#b52b2b" >YOU ANSWERED WRONG</h5>
-          <%};%>
-
-            </div>
-
-          
-          </div>
-            <br>
-
-            <% }; %>
-
-            
-      
-       </div>
-       
-       
-       </div>
   
        </div>
-       
+       <script>
+       </script>
+
        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-       <script>
-           document.getElementById("review").onclick=function()
-           {
-            document.getElementById("scorecard").innerHTML=document.getElementById("answer").innerHTML;
-           };
-       </script>
-       </body>
+    </body>
        </html>

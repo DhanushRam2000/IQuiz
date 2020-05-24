@@ -13,7 +13,16 @@ const userSchema = new Schema({
   total_possible_score: {type:Number , required:true},
   setter: {type:Boolean , required:true},
   quizzes_set: [{type:Schema.Types.ObjectId,ref:'quiz',required:true}],
-  attended_quiz: [{_id:false,quiz_id:{type:Schema.Types.ObjectId,ref:'quiz',required:true},time:{type:Date , required:true},total_score: {type:Number , required:false},total_possible_score: {type:Number , required:false},status: {type:Boolean , required:true}}]
+  attended_quiz: [
+                  {_id:false,
+                    quiz_id:{type:Schema.Types.ObjectId,
+                      ref:'quiz',required:true},
+                      time:{type:Date , required:true},
+                      total_score: {type:Number , required:false},
+                      total_possible_score: {type:Number , required:false},
+                      status: {type:Boolean , required:true},
+                      reviewStatus:{type:Boolean , required:false},
+                    }]
 });
 
 module.exports = mongoose.model('user', userSchema);
