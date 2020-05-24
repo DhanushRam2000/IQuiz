@@ -120,11 +120,11 @@
             <div class="flex-domains">
 
           <%if(!result[i].op){%>
-          <h5 class="cust12" style="color:#b52b2b" >YOU DID NOT ANSWER</h5>
+          <h5 class="cust12" >YOU <span style="color:#bd2d1a" >DID NOT</span> ANSWER</h5>
           <%}else if(result[i].op == questions[i].options[questions[i].answer-1]){%>
-          <h5 class="cust12" style="color:#0f872f" >YOU ANSWERED CORRECT</h5>
+          <h5 class="cust12" >YOU ANSWERED <span style="color:#358f5d">CORRECT</span></h5>
           <%}else{%>
-          <h5 class="cust12" style="color:#b52b2b" >YOU ANSWERED WRONG</h5>
+          <h5 class="cust12" >YOU ANSWERED <span  style="color:#bd2d1a">WRONG</span></h5>
           <%};%>
 
             </div>

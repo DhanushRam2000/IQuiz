@@ -470,9 +470,6 @@ img {
   .starwars-demo {
     font-size: 10px;
   }
-  #background-wrap {
-    overflow:hidden;
-  }
   html{
     overflow:hidden
   }    
@@ -485,9 +482,7 @@ img {
   html{
     overflow:hidden
   }    
-  #background-wrap {
-    overflow:hidden;
-  }
+  
   body{
     overflow:hidden
   }   

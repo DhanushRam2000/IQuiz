@@ -18,7 +18,7 @@ body:before {
   content: "";
   height: 0px;
   padding: 0px;
-  border: 130em solid #313440;
+  border: 130em solid black;
   position: absolute;
   left: 50%;
   top: 100%;
@@ -250,7 +250,7 @@ p {
 
 @keyframes materia {
   0% {
-    background: #7A8179;
+    background: black;
   }
   50% {
     border-radius: 4px;
@@ -394,7 +394,7 @@ p {
   float: left;
   padding: 90px 30px 10px 30px;
   background:#ffffff;
-  color: #333333;
+  color: black;
   margin-top: 100px;
   text-align: center;
   font-weight: bold;
@@ -479,7 +479,7 @@ p {
   float: left;
   padding: 1px 0px;
   background:#ffffff;
-  color: #333333;
+  color: black;
   margin-top: 10px;
   text-align: center;
   font-weight: bold;
