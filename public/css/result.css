@@ -225,7 +225,9 @@
     }
     .sp22{
         width: 140px;
-        background-color: #E9ECEF;
+        background-color: rgb(153, 159, 165);
+        border-color: rgb(153, 159, 165);
+        color: black;
     }
      .score
     {
