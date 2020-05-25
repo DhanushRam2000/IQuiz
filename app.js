@@ -7,6 +7,7 @@ const session = require('express-session');
 const sessionStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const multer = require("multer");
+const compression = require("compression");
 
 const Routes = require("./routes/route");
 const user = require("./models/user");
@@ -49,6 +50,8 @@ const csrfProtection = csrf();
 app.set("view engine","ejs");
 
 app.set("views","views");
+
+app.use(compression());
 
 app.use(express.static(path.join(__dirname,"public")));
 
