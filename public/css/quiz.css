@@ -1,13 +1,14 @@
 body{
-    background-color: rgb(153, 159, 165);
+    background-color: rgb(182, 199, 201);/*rgb(153, 159, 165); */
     height: 100%;
 }
 .jumbo_custom{
-    background-color: rgb(153, 159, 165);
+    background-color: rgb(182, 199, 201);
     height: 100%;
 }
 .question_size{
     font-size: 4vw;
+    font-weight: 500;
 }
 
 /* h1{ 

@@ -1,5 +1,5 @@
 .jumbo_custom{
-    background-color: rgb(153, 159, 165);/* rgb(202, 201, 197); */
+    background-color: rgb(182, 199, 201);/* rgb(202, 201, 197); */
     padding:5px;
     margin:5px;
 }
@@ -43,6 +43,9 @@
 
 .spq3{
     width:100%;
+    font-weight: 500;
+    color: black;
+    border-color: rgb(182, 199, 201);
 }
 
 .spq12{
@@ -168,9 +171,10 @@
 }
 .sp22{
     width: 600px;
-    background-color: rgb(153, 159, 165);
-    border-color: rgb(153, 159, 165);
+    background-color: rgb(182, 199, 201);
+    border-color: rgb(182, 199, 201);
     color: black;
+    font-weight: 500;
 }
 .sp7{
     font-size:20px;
@@ -228,9 +232,6 @@
     }
     .sp22{
         width: 140px;
-        background-color: rgb(153, 159, 165);
-        border-color: rgb(153, 159, 165);
-        color: black;
     }
      .score
     {

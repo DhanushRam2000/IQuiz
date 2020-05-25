@@ -34,7 +34,10 @@ margin-top: 7px;
 {
     display: block; 
     margin: auto auto; 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flexbox;
+    width: 210px;
 }
 .showmore a
 {
@@ -42,6 +45,7 @@ margin-top: 7px;
     background-image: linear-gradient(315deg, #63d471 0%, #29a056 74%);
     width: 150px;
     border-radius: 30px;
+    display: inline-block;
 }
 .domain1
 {
@@ -222,9 +226,14 @@ font-weight: 600;
 .domain{
     margin-bottom: 10px;
 }
+
+.showmore a
+{
+    margin-left: 30px;
+}
   
 .quiz-card {
-    width: 120px;
+    width: 210px;
     min-height: 250px;
     height: auto;
     max-width: 95%;
@@ -246,7 +255,7 @@ font-weight: 600;
     }
       
     .quiz-card {
-        width: 150px;
+        width: 210px;
         min-height: 250px;
         height: auto;
         max-width: 95%;
@@ -268,7 +277,7 @@ font-weight: 600;
     }
       
     .quiz-card {
-        width: 150px;
+        width: 210px;
         min-height: 250px;
         height: auto;
         max-width: 95%;
@@ -288,7 +297,7 @@ font-weight: 600;
     }
       
     .quiz-card {
-        width: 12rem;
+        width: 13.5rem;
         min-height: 250px;
         height: auto;
         max-width: 95%;
