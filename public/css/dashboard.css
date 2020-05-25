@@ -233,8 +233,8 @@ font-weight: 600;
 }
   
 .quiz-card {
-    width: 210px;
-    min-height: 250px;
+    width: 250px;
+    min-height: 290px;
     height: auto;
     max-width: 95%;
     margin:5px auto;
