@@ -328,7 +328,7 @@ body {
 }
 .byline span {
   animation: spin-letters 10s linear ;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 .byline {
   animation: move-byline 10s linear ;

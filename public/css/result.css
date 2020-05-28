@@ -103,9 +103,9 @@
 .wrong
 {
     border: 1px solid black;
-    background-color: #b7853b;
-    border-color: #b7853b;
-    background-image: linear-gradient(315deg, #ca1111 0%, #bd2d1a 60%);
+    background-color: #c73636;
+    border-color: #c73636;
+    background-image: linear-gradient(315deg, #c73636 0%, #d8503e 60%);
     height: 50px;
     width: 200px;
     border-radius: 25px;
